@@ -4,7 +4,8 @@
 	"description": "MERN Chat App",
 	"main": "index.js",
 	"scripts": {
-		"start": "nodemon index.js"
+		"start": "nodemon index.js",
+		"build": "npm install"
 	},
 	"author": "Amit Kumar",
 	"license": "ISC",
