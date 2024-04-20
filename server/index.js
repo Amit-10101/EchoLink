@@ -11,13 +11,18 @@ const User = require('./Models/UserModal');
 const Message = require('./Models/MessageModal');
 
 const app = express();
+const port = process.env.PORT || 4040;
 dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
 		credentials: true,
-		origin: process.env.CLIENT_URL,
+		origin: [
+			process.env.CLIENT_URL,
+			'https://echolink.onrender.com',
+			'https://echo-link.netlify.app/',
+		],
 	})
 );
 mongoose.connect(process.env.MONGO_URL);
