@@ -31,7 +31,7 @@ const Chat = () => {
 
 	const connectToWs = () => {
 		// const ws = new WebSocket(`ws://${import.meta.env.VITE_WS_URL}`);
-		const ws = new WebSocket(`ws://echolink.onrender.com`);
+		const ws = new WebSocket(`wss://echolink.onrender.com`);
 		setWs(ws);
 
 		ws.addEventListener('message', handleMessage);
