@@ -18,7 +18,8 @@ app.use(cookieParser());
 app.use(
 	cors({
 		credentials: true,
-		origin: process.env.CLIENT_URL,
+		// origin: process.env.CLIENT_URL,
+		origin: 'https://echo-link.netlify.app',
 	})
 );
 mongoose.connect(process.env.MONGO_URL);
